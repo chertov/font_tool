@@ -1,28 +1,7 @@
-
-// import s from './Button.css';
-
-// @import "~normalize.css";
-// @import "~@blueprintjs/core/lib/css/blueprint.css";
-// @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Classes, Intent, Spinner } from "@blueprintjs/core";
 
-// // with vanilla JS, use React.createElement
-// ReactDOM.render(
-//     React.createElement(Spinner, {
-//         className: Classes.SMALL,
-//         intent: Intent.PRIMARY
-//     }),
-//     myContainerElement
-// );
-
-
-import { Button, Icon } from "@blueprintjs/core";
 import { FileInput } from "@blueprintjs/core";
-import { Example, IExampleProps } from "@blueprintjs/docs-theme";
-
 import { Font, read_font } from './font'
 
 interface IState {
@@ -59,7 +38,6 @@ export class FontTool extends React.Component<IProps, IState>{
     }
     public render() {
         const { data, font } = this.state;
-        let size = data ? <div>File size: {data.length}</div> : <div></div>
 
         let blocks = []
         for (let block_index = 0; block_index < font.blocks.length; block_index++) {
@@ -105,18 +83,11 @@ export class FontTool extends React.Component<IProps, IState>{
             <div>
                 <FileInput disabled={false} text="Choose file..." onInputChange={this.onInputFileChange} />
                 <br />
-                {size}
-                <br />
-                {font.magic}
-                <br />
-                {font.blocks.length}
-                <br />
                 {blocks}
             </div>
         );
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const myContainerElement = document.getElementById("container");

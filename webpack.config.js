@@ -43,7 +43,7 @@ const web = {
     entry: './src/web.tsx',
     // target: 'node',
     output: {
-        path: path.resolve(__dirname, './docs/demo/'),
+        path: path.resolve(__dirname, './docs/'),
         filename: 'bundle.js'
     },
 

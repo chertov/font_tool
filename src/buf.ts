@@ -103,9 +103,8 @@ export class Buf {
     }
 
     read_from_offset(offset: number, size: number) : Uint8Array {
-        if (this.offset + size >= this.data.length) throw new Error("EndOfBufferError");
-        const value = this.data.subarray(offset, offset + size);
-        return value;
+        if (offset + size >= this.data.length) throw new Error("EndOfBufferError");
+        return this.data.subarray(offset, offset + size);
     }
 
     read_u8() : number {
