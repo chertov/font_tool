@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "outDir": "./pub/js/",
+        "target": "es5",
+        "lib": ["es2017", "dom", "webworker"],
+        "experimentalDecorators": true,
+        "jsx": "react",
+        "allowJs": true
+    },
+    "include": [
+        "./src/"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
